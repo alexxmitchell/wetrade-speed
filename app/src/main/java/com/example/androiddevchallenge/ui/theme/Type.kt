@@ -17,27 +17,61 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
+val montserratExtraBold = FontFamily(
+    Font(R.font.montserrat_extra_bold)
+)
+val montserratSemiBold = FontFamily(
+    Font(R.font.montserrat_semi_bold)
+)
+val montserratMedium = FontFamily(
+    Font(R.font.montserrat_semi_bold_font)
+)
+val montserratLight = FontFamily(
+    Font(R.font.montserrat_light_font)
+)
+val montserratBold = FontFamily(
+    Font(R.font.montserrat_bold_font)
+)
 // Set of Material typography styles to start with
 val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-        /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+    h1 = TextStyle(
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = 40.sp,
+        letterSpacing = 1.5.sp,
+        fontFamily = montserratExtraBold
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
+    h2 = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 36.sp,
+        letterSpacing = 0.sp,
+        fontFamily = montserratExtraBold
+    ),
+    h3 = TextStyle(
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 13.sp,
+        letterSpacing = 0.sp,
+        fontFamily = montserratSemiBold
+    ),
+    subtitle1 = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 15.sp,
+        letterSpacing = 0.sp,
+        fontFamily = montserratMedium
+    ),
+    body1 = TextStyle(
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
-    )
-    */
+        fontSize = 16.sp,
+        fontFamily = montserratLight
+    ),
+    button = TextStyle(
+        fontWeight = FontWeight.W500,
+        fontSize = 13.sp,
+        fontFamily = montserratBold
+    ),
 )
